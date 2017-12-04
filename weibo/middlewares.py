@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-
+import base64
 import random
-from .user_agent import agents
-from .cookies import cookies
-
+from weibo.user_agent import agents
+from weibo.cookies import cookies
+from weibo.proxy import proxys
 from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 
 
@@ -15,8 +15,17 @@ class UserAgentMiddleware(UserAgentMiddleware):
 
 
 class CookiesMiddleware(object):
-    def process_request(self,requset,spider):
+    def process_request(self,request,spider):
         cookie = random.choice(cookies)
-        requset.cookies = cookie
+        request.cookies = cookie
 
+# 设置代理IP
+class ProxyMiddleware(object):
+     def process_request(self, request, spider):
+        if len(proxys) > 0:
+            proxy = random.choice(proxys)
+            request.meta['proxy'] = proxy
+            # proxy_user_pass = "USERNAME:PASSWORD"
+            # encoded_user_pass = base64.encodestring(proxy_user_pass)
+            # request.headers['Proxy-Authorization'] = 'Basic ' + encoded_user_pass
 
