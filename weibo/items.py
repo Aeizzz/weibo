@@ -46,3 +46,11 @@ class FollowsItem(Item):
     Num_Fans=Field() #粉丝数
     profile_url=Field() #主页链接
 
+
+class KeyTweetsItem(Item):
+    _id = Field() # 微博ID
+    keyword = Field()
+    ID = Field() #用户ID
+    text = Field() #微博内容
+    PubTime = Field() #发表时间
+    createtime = Field()
