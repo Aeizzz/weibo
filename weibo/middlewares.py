@@ -6,8 +6,6 @@ from weibo.cookies import cookies
 from weibo.proxy import proxys
 from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 
-
-
 class UserAgentMiddleware(UserAgentMiddleware):
     def process_request(self,request,spider):
         agent = random.choice(agents)

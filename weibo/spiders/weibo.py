@@ -13,12 +13,12 @@ import re
 
 __author__ = '7326'
 
-from scrapy.spider import CrawlSpider
+from scrapy.spider import CrawlSpider, logging
 from scrapy.http import Request
 import json
 from weibo.weiboID import weiboID
 from weibo.items import InformationItem,TweetsItem,FansItem,FollowsItem
-import logging
+
 
 class WeiBoSpider(CrawlSpider):
     name = 'weibo'

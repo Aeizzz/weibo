@@ -38,7 +38,7 @@ DOWNLOADER_MIDDLEWARES = {
 
 #------------scrapy-redis 分布式爬虫相关设置-----------------
 # 修改scrapy默认的调度器为scrapy重写的调度器 启动从reids缓存读取队列调度爬虫
-SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 
 # 调度状态持久化，不清理redis缓存，允许暂停/启动爬虫
 SCHEDULER_PERSIST = True
