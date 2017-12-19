@@ -15,7 +15,7 @@ from selenium import webdriver
 import time
 
 # chromedriver
-chromepath = 'F:\weibo\weibo\chromedriver.exe'
+chromepath = 'chromedriver.exe'
 myWeiBo = [
     {'account':'15610593295','password':'liuhonglei199634'},
 ]

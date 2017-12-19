@@ -17,6 +17,11 @@ class CookiesMiddleware(object):
         cookie = random.choice(cookies)
         request.cookies = cookie
 
+
+
+    # def process_response(self,request):
+    #     pass
+
 # 设置代理IP
 class ProxyMiddleware(object):
      def process_request(self, request, spider):

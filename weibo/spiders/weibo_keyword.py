@@ -56,6 +56,7 @@ class Weibo_keyword(CrawlSpider):
         keyword = response.meta['keyword']
         page = ''
         containerid = ''
+        tweets = tweets['data']
 
         if tweets.get('cards',''):
             cards = tweets['cards']
